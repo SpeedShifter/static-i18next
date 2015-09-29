@@ -1,0 +1,35 @@
+{
+  "name": "static-i18next",
+  "version": "0.0.1",
+  "description": "Localizing static assets",
+  "repository": "https://github.com/SpeedShifter/static-i18next",
+  "author": {
+    "name": "Stas Yermakov",
+    "email": "speeedermak@gmail.com",
+    "url": "https://github.com/SpeedShifter/static-i18next"
+  },
+  "main": "dist/static_i18next.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt": "~0.4.2",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0",
+    "grunt-typescript": "^0.7.0",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "i18next-client": "^1.7.4",
+    "lodash": "^3.10.1",
+    "q": "^1.0.1"
+  }
+}
