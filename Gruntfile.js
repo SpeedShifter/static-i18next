@@ -17,7 +17,6 @@ module.exports = function (grunt) {
 
     yeoman: {
       // configurable paths
-      tasks: 'tasks',
       src: 'src',
       dist: 'dist',
       test_app: 'test/fixtures/app'
@@ -36,7 +35,7 @@ module.exports = function (grunt) {
     jshint: {
       all: [
         'Gruntfile.js',
-        'tasks/*.js',
+        '<%= yeoman.dist %>/*.js',
         '<%= nodeunit.tests %>'
       ],
       options: {
@@ -54,7 +53,7 @@ module.exports = function (grunt) {
     typescript: {
       dist: {
         src: ['<%= yeoman.src %>/**/*.ts'],
-        dest: '<%= yeoman.tasks %>',
+        dest: '<%= yeoman.dist %>',
         options: {
           expand: true,
           target: 'es5', //or es3
@@ -96,9 +95,6 @@ module.exports = function (grunt) {
       ]
     }
   });
-
-  // Actually load this plugin's task(s).
-  grunt.loadTasks('tasks');
 
   grunt.registerTask('serve', function (target) {
     grunt.task.run([
